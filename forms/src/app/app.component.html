@@ -45,6 +45,16 @@
       </div>
     </div>
   </div>
+  <div class="field">
+    <label for="currentSalary">Current Salary </label>
+    <input id="currentSalary" type="number" formControlName="currentSalary"/>
+    <div *ngIf="myForm.get('currentSalary').invalid && (myForm.get('currentSalary').touched || myForm.get('currentSalary').dirty)">
+      <div *ngIf="myForm.get('currentSalary').errors?.required" class="error-message">
+        current salary is mandatory field
+      </div>
+    </div>
+  </div>
+  
   </div>
   
 </form>
