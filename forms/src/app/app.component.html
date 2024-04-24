@@ -9,21 +9,22 @@
     </div>
   </div>
   <div>
-    <label for="lastName">LastName:</label>
-    <input id="lastName" formControlName="lastName" type="text"/>
+    <label for="last-Name">LastName:</label>
+    <input id="last-Name" type="text" formControlName="lastName"/>
     <div *ngIf="myForm.get('lastName').invalid && (myForm.get('lastName').dirty || myForm.get('lastName').touched)">
-      <div *ngIf="myForm.get('lastName').errors?required">
+      <div *ngIf="myForm.get('lastName').errors?.required">
         this field is required so please fill this 
       </div>
     </div>
   </div>
   <div>
-    <label for="address">Address</label>
-    <input id="address" type="text" formControlName="address"/>
+    <label for="address1">Address</label>
+    <input id="address1" type="text"  formControlName="address"/>
     <div *ngIf="myForm.get('address').invalid && (myForm.get('address').touched || myForm.get('address').dirty)">
-      <div *ngIf="myForm.get('address').errors?required">
+      <div *ngIf="myForm.get('address').errors?.required">
         address is required
       </div>
     </div>
   </div>
+  
 </form>
