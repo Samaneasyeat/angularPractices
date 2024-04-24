@@ -11,6 +11,7 @@ export class AppComponent {
     firstName: new FormControl("",Validators.required),
     lastName:new FormControl("", Validators.required),
     address : new FormControl("",Validators.required),
-    mobileNum : new FormControl("",Validators.required)
+    mobileNum : new FormControl("",Validators.required),
+    companyName:new FormControl("",Validators.required)
   })
 }
