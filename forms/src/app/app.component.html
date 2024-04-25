@@ -20,6 +20,9 @@
       <div *ngIf="myForm.get('lastName').errors?.required" class="error-message">
         this field is required so please fill this 
       </div>
+      <div *ngIf="myForm.get('lastName').errors?.minlength" class="error-message">
+        min length is 7 please fill more characters
+      </div>
     </div>
   </div>
   <div class="field">
