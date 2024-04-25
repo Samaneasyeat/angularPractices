@@ -32,6 +32,9 @@
       <div *ngIf="myForm.get('address').errors?.required" class="error-message">
         address is required
       </div>
+      <div *ngIf="myForm.get('address').errors?.minlength" class="error-message">
+        address should be more than 12 letters please fill it
+      </div>
     </div>
   </div>
   <div class="field">
@@ -41,6 +44,11 @@
       <div *ngIf="myForm.get('mobileNum').errors?.required" class="error-message">
         mobile number is required field please fill it
       </div>
+      <div *ngIf="myForm.get('mobileNum').errors?.min" class="error-message">
+        please fill 10 digits for valid mobile number
+
+      </div>
+     
     </div>
   </div>
   <div class="field">
@@ -49,6 +57,9 @@
     <div *ngIf="myForm.get('companyName').invalid && (myForm.get('companyName').touched || myForm.get('companyName').dirty)">
       <div *ngIf="myForm.get('companyName').errors?.required" class="error-message">
         Company Name is required so please fill the name of company
+      </div>
+      <div *ngIf="myForm.get('companyName').errors?.minlength" class="error-message">
+        please fill more than 12 characters
       </div>
     </div>
   </div>
