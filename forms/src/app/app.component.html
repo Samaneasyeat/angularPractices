@@ -11,6 +11,10 @@
         name characters should greater than 6
 
       </div>
+      <div *ngIf="myForm.get('firstName').errors?.maxlength" class="error-message">
+        name can't be more than 12 charactres
+
+      </div>
     </div>
   </div>
   <div class="field">
@@ -23,6 +27,10 @@
       <div *ngIf="myForm.get('lastName').errors?.minlength" class="error-message">
         min length is 7 please fill more characters
       </div>
+      <div *ngIf="myForm.get('lastName').errors?.maxlength" class="error-message">
+        max length can't be more than 15
+
+      </div>
     </div>
   </div>
   <div class="field">
@@ -34,6 +42,10 @@
       </div>
       <div *ngIf="myForm.get('address').errors?.minlength" class="error-message">
         address should be more than 12 letters please fill it
+      </div>
+      <div *ngIf="myForm.get('address').errors?.maxlength" class="error-message">
+        address can't be more than 20 characters
+
       </div>
     </div>
   </div>
@@ -48,6 +60,10 @@
         please fill 10 digits for valid mobile number
 
       </div>
+      <div *ngIf="myForm.get('mobileNum').errors?.max" class="error-message">
+        mobile number can't be more than 10 digits
+
+      </div>
      
     </div>
   </div>
@@ -60,6 +76,9 @@
       </div>
       <div *ngIf="myForm.get('companyName').errors?.minlength" class="error-message">
         please fill more than 12 characters
+      </div>
+      <div *ngIf="myForm.get('companyName').errors?.maxlength" class="error-message">
+        max length can't be more than 20 characters
       </div>
     </div>
   </div>
