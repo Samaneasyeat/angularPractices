@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   myForm = new FormGroup({
-    firstName: new FormControl("",Validators.required),
+    firstName: new FormControl("",[Validators.required,Validators.minLength(6)]),
     lastName:new FormControl("", Validators.required),
     address : new FormControl("",Validators.required),
     mobileNum : new FormControl("",Validators.required),

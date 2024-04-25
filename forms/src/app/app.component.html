@@ -5,7 +5,11 @@
     <input id="name" type="text" formControlName="firstName"/>
     <div *ngIf="myForm.get('firstName').invalid && (myForm.get('firstName').touched || myForm.get('firstName').dirty)">
       <div *ngIf="myForm.get('firstName').errors?.required" class="error-message">
-        required
+         name is required field please fill this
+      </div>
+      <div *ngIf="myForm.get('firstName').errors?.minlength" class="error-message">
+        name characters should greater than 6
+
       </div>
     </div>
   </div>
